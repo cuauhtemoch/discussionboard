@@ -23,7 +23,8 @@ module.exports = {
   findOne: function (req, res){
     Topic.find({_id: req.params.id}, function (err, data){
       if(err) { console.log(err) }
-      if(data) { res.json(data); }
+      if(data) { res.json(data);
+       }
     })
   },
   addPost: function (req, res){

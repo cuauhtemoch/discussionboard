@@ -17,10 +17,12 @@
 
 <div *ngFor='let post of posts'>
   <h3><a [routerLink]="['/user', post._user._id]">{{ post._user.name }}</a>: {{ post.text }}
-  (Votes: {{ post.vote }})</h3><br>
+  </h3><br>
+
   <div *ngFor='let comment of post.comments'>
     <a [routerLink]="['/user', comment._user._id]">{{ comment._user.name }}</a> {{ comment.text }}
   </div>
+
   <form #commentForm='ngForm' (submit)='commentSubmit(comment.value, post._id, commentForm)'>
     <textarea name="comment" cols="40" rows="3"
     required

@@ -16,6 +16,7 @@ export class TopicComponent{
     // _topic: '',
   }
   topic_id = '';
+ 
   topics = {
     title: '',
     text: '',
